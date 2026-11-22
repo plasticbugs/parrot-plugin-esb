@@ -28,8 +28,8 @@ include(${PARROTCART_SDK}/sdk/cvplugin.cmake)
 
 # The same source makes the same file, whenever it's built: the compiler's
 # __DATE__ and __TIME__ (the build date in the binary info) come from
-# SOURCE_DATE_EPOCH, fixed here at the tested build's day, 2026-11-17.
-set(BUILD_EPOCH 1794916800)
+# SOURCE_DATE_EPOCH, fixed here at the tested build's day, 2026-11-21.
+set(BUILD_EPOCH 1795262400)
 set(CMAKE_C_COMPILER_LAUNCHER ${CMAKE_COMMAND} -E env SOURCE_DATE_EPOCH=${BUILD_EPOCH})
 set(CMAKE_CXX_COMPILER_LAUNCHER ${CMAKE_COMMAND} -E env SOURCE_DATE_EPOCH=${BUILD_EPOCH})
 
@@ -45,5 +45,5 @@ cvsd_use(esb)
 cvpad_use(esb)                              # USB game pads: the port is a host
 pico_enable_stdio_usb(esb 0)
 pico_enable_stdio_uart(esb 0)
-cvcart_plugin(esb ID parrotcart.esb NAME "Empire Strikes Back" VERSION 0.1.4 BY "Parrot Cart"
+cvcart_plugin(esb ID parrotcart.esb NAME "Empire Strikes Back" VERSION 0.1.7 BY "Parrot Cart"
               HOME /ESB USES usb-host ICON src/esb_icon.txt FILE ESB.CVP README CART-README.md)

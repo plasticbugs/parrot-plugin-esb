@@ -1,1 +1,3 @@
-Fixes the glitches on the console. The cart now reads the console's address lines twice before it answers.
+- Keypad * or # adds a coin, and keypad 1 starts the game, the same keys as the other arcade plugins. On a USB pad, minus is the coin and plus the start, as before.
+- The plugin now finds a pad that is already on a powered hub when the game starts, and one you plug in while it runs.
+- The cart now sends the sound chip's whole state with every frame, so a byte the console misreads can't leave a tone stuck on.
