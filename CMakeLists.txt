@@ -45,5 +45,5 @@ cvsd_use(esb)
 cvpad_use(esb)                              # USB game pads: the port is a host
 pico_enable_stdio_usb(esb 0)
 pico_enable_stdio_uart(esb 0)
-cvcart_plugin(esb ID parrotcart.esb NAME "Empire Strikes Back" VERSION 0.1.7 BY "Parrot Cart"
+cvcart_plugin(esb ID parrotcart.esb NAME "Empire Strikes Back" VERSION 0.1.8 BY "Parrot Cart"
               HOME /ESB USES usb-host ICON src/esb_icon.txt FILE ESB.CVP README CART-README.md)
